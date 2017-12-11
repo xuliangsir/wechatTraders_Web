@@ -1,0 +1,39 @@
+/* pages/submitInformation/submitInformation.wxss */
+
+.xd-view-section{
+	border-bottom: 1px solid #CCCCCC;
+	display: flex;
+	height: 80rpx;
+	align-items: center;
+}
+.xd-view-section:first-of-type{
+	border-top: 1px solid #CCCCCC;
+}
+.xd-text-nick{
+	padding-left: 10rpx;
+	width: 280rpx;
+	font-size: 36rpx;
+}
+.xd-input{
+	padding-left: 18rpx;
+	font-size: 36rpx;
+}
+.xd-label-radio{
+	margin-left: 18rpx;
+}
+.xd-img-user1{
+	border: 2px dashed #CFCFCF;
+	width: 240rpx;
+	height: 240rpx;
+	border-radius: 10rpx;
+	margin-left: 10rpx;
+}
+.xd-img-section text{
+	display: block;
+	line-height: 80rpx;
+	padding-left: 10rpx;
+}
+.xd-header{
+	padding-left: 8rpx;
+	font-weight: bold;
+}

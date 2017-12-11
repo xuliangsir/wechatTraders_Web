@@ -1,0 +1,20 @@
+<!--pages/register/register.wxml-->
+<view class="container">
+  <view class='myforms'>
+    <view>
+      <label>账号:</label>
+      <input placeholder='请输入注册过的手机号' value="{{loginAccount_number.value}}" bindinput="verifyPhone"  data-reg="loginAccount_number"></input>
+    </view>
+    <view class='code'>
+      <label>密码:</label>
+      <input placeholder='密码为8-16位的字符' password='true' value="{{loginPwd.value}}" bindinput="verifyPwd"  data-reg="loginPwd"></input>
+    </view>
+    <view>
+      <button bindtap="submitLogin">登录</button>
+    </view>
+    <view class='login'>
+      <text bindtap="navigateToRegister">注册</text>
+    </view>
+  </view>
+</view>
+

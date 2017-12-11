@@ -1,0 +1,4 @@
+<!--pages/pic/pic.wxml-->
+<text>pages/pic/pic.wxml</text>
+<image bindtap='uploadToCos' style="border:1px solid red" src="{{imagepath}}"></image>
+<button bindtap="upload">点击上传到腾讯云</button>

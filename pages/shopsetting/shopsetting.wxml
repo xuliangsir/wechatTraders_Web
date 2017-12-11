@@ -1,0 +1,72 @@
+<!--pages/setting/setting.wxml-->
+<view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="se-header">店铺设置</view>
+    <view class="se-view-section">
+      <text class="se-title">店铺名称 :</text>
+      <input placeholder="请输入店铺名称" name="shopname"></input>
+    </view>
+    <!-- 相册模块 -->
+    <view>
+       <text class="se-title">店铺相册</text> 
+    <!-- <image class="se-img-gallery" catchtap="chooseImage" src="{{src}}" data-img = "shopimg-gallery" class="se-image" name="shopimg"></image> -->
+     <view class="weui-cell__bd" style="padding:20rpx;">
+            <view class="weui-uploader__bd overflow-inherit"   >
+              <view class="weui-uploader__files overflow-inherit">
+                <block wx:for="{{imageList}}" wx:for-item="image">
+                  <view class="weui-uploader__file" style="margin:5px;">
+                    <image class="weui-uploader__img  imagebigsmall" src="{{image}}" data-src="{{image}}" bindtap="previewImage" mode='aspect'></image>
+                    <view class="del" data-index="{{index}}" bindtap="delPic"><image src="../../images/close.png"></image></view>
+                  </view>
+                </block>
+              </view>
+              <view class="weui-uploader__input-box" style="margin:8rpx;" wx:if="{{uploadPicBtn}}">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+            </view>
+          </view>
+    </view>
+
+    <!-- 电话模块 -->
+    <view class="se-view-section">
+      <text class="se-title">客服电话  :</text>
+      <input placeholder="请输入客服电话" name="servicephone"></input>
+    </view>
+      
+      
+  
+    
+    <!-- 服务时间模块 -->
+    <view class="seviceTime">
+      <text class="se-title">服务时间:</text>
+      <picker mode="time" value="{{time_start}}"  name="time_start" bindchange="bindTimeChange_start" class="se_time">
+        <view class="picker se_time">
+          开始时间：{{time_start}}
+        </view>
+      </picker>
+      <picker mode="time" value="{{time_end}}" bindchange="bindTimeChange_end" class="se_time" name="time_end">
+        <view class="picker se_time">
+          终止时间：{{time_end}}
+        </view>
+      </picker>
+      
+      
+    </view>
+    <!-- 服务范围 -->
+    <view>
+      <text class="se-title">服务范围：</text>
+      <checkbox-group name="servicearea"  class="choice">
+        <label class="checkbox" wx:for="{{items}}">
+    <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+      </checkbox-group>
+    </view>
+    <!-- 保存 -->
+    <view class="btn-area">
+      <button formType="submit" size="default" hover-class="button-hover">双击保存</button>     
+     </view>
+    
+  </form>
+
+</view>
+

@@ -1,0 +1,41 @@
+/* pages/register/register.wxss */
+.myforms{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%,-50%,0);
+}
+.myforms view{
+  display: flex;
+  align-items: center;
+  margin: 30rpx 0;
+}
+.myforms view label{
+  display: block;
+  width: 110rpx;
+}
+.myforms view input{
+  border:1px solid #ccc;
+  font-size: 30rpx;
+  width: 400rpx;
+  height: 72rpx;
+  padding-left: 10px;
+  border-radius: 5px;
+  letter-spacing: 2rpx;
+}
+
+.myforms view button{
+  background: #e04831;
+  color:#fff;
+  width:540rpx;
+  height:82rpx;
+  font-size:32rpx;
+  background: orangered;
+}
+
+.login{
+  justify-content: flex-end;
+  font-size: 26rpx;
+  color: orangered;
+  letter-spacing: 6rpx; 
+}

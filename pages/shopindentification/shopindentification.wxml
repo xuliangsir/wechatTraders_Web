@@ -1,0 +1,42 @@
+<!--pages/submitInformation/submitInformation.wxml-->
+<view class="xd-container">
+  <form bindsubmit="bindSaveTap">
+  	<view class="xd-header">企业基本信息</view>
+    <view class="xd-view-section">
+    	<text class="xd-abs xd-flex-left xd-text-nick">营业执照名称</text>
+    	<input name="nick_name" placeholder="营业执照名称" class="xd-input" value="{{licencename}}"/>
+  	</view>
+	  <view class="xd-view-section">
+	    <text class="xd-abs xd-flex-left xd-text-nick">请选择主体类型</text>
+	    <radio-group class="xd-abs xd-radio-group" name="baby_sex" bindchange="changeRadioFn">
+	      <label class="xd-label-radio" wx:for="{{style_items}}" wx:key="item">
+	        <radio size="20" color="#3cc975" value="{{item.name}}" wx:if="{{item.name==userInfo.baby_sex}}" checked="true"/>
+	        <radio size="20" color="#3cc975" value="{{item.name}}" wx:else checked="false"/>
+	        <text class="xd-radio-text">{{item.value}}</text>
+	      </label>
+	    </radio-group>
+	  </view>
+	  <view class="xd-img-section">
+	  	<text wx:if="{{style_state == 1}}">请上传个人手持身份证图：</text>
+	  	<text wx:else>请上传营业执照扫描图：</text>
+	  	<image class="xd-img-user1" data-tempFiles="{{tempFiles}}" catchtap="chooseImageTap" src="{{logo}}" data-img = "logo"></image>
+	  </view>
+	  <view class="xd-header" wx:if="{{style_state == 1}}">指定联系人基本信息</view>	
+	  <view class="xd-header" wx:else>企业指定联系人基本信息</view>
+	  <view class="xd-view-section">
+    	<text class="xd-abs xd-flex-left xd-text-nick">联系人姓名</text>
+    	<input name="tel_name" placeholder="请输入联系人姓名" class="xd-input" value="{{tel_name}}"/>
+  	</view>
+	  <view class="xd-view-section">
+    	<text class="xd-abs xd-flex-left xd-text-nick">联系人身份证号</text>
+    	<input name="tel_id" placeholder="请输入联系人身份证号" class="xd-input" value="{{identitycardnum}}"/>
+  	</view>
+	  <view class="xd-img-section">
+	  	<text>请上传联系人身份证照片正反面：</text>
+	  	<image class="xd-img-user1" catchtap="chooseImageTap" src="{{identityCard_front}}" data-img = "identityCard_front"></image>
+	  	<image class="xd-img-user1" catchtap="chooseImageTap" src="{{identityCard_back}}" data-img = "identityCard_back"></image>
+	  </view>
+  <button size="default" class="xd-abs xd-subBtn" formType="submit" hover-class="xd-subBtn-hover" bindtap='navigatetoSet'>保存</button>
+  
+  </form>
+</view>

@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='myforms'>
+    <view>
+      <label>手机号:</label>
+      <input placeholder='请输入手机号' value="{{registerVerifyPhonto.val}}" bindinput="registerVerifyPhontoFn" data-reg="registerVerifyPhonto" maxlength='11'></input>
+    </view>
+    <view class='code'>
+      <label>验证码:</label>
+      <input placeholder='请输入验证码' value="{{registerVerifyCode.val}}" bindinput="registerVerifyCodeFn" data-reg="registerVerifyCode"></input>
+      <button bindtap="btnGetCode">验证码</button>
+    </view>
+    <view>
+      <button bindtap="btnRegisterFn">注册</button>
+    </view>
+    <view class='login'>
+      <text bindtap='navigateToLogin'>登录</text>
+    </view>
+  </view>
+</view>

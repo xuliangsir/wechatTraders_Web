@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/pic/pic",
+    "pages/login/login",             
+    "pages/shopindentification/shopindentification",                        
+    
+    "pages/shopsetting/shopsetting" ,                      
+
+    "pages/register/register" ,                    
+    "pages/setPassword/setPassword"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "家之圈",
+    "navigationBarTextStyle": "black"
+  }
+}

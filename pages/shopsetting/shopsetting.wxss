@@ -1,0 +1,63 @@
+/* pages/setting/setting.wxss */
+
+.se-header{
+  padding-left: 8rpx;
+	font-weight: bold;
+}
+.se-title{
+  padding-left: 8rpx;
+  
+  
+}
+.se-view-section{
+  border-bottom: 1px solid #CCCCCC;
+	display: flex;
+	height: 80rpx;
+	align-items: center;
+}
+
+.choice{
+  height: 80rpx;
+  padding-left: 8rpx;
+}
+.button-hover{
+  background-color: grey;
+  color:#fff;
+}
+ .se_time{
+  padding-left: 18rpx;
+} 
+.seviceTime{
+  border-bottom: 1px solid #CCCCCC;
+}
+.se-image{
+  border: 2px dashed #CFCFCF;
+	border-radius: 10rpx;
+	margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+/*上传图片样式*/
+
+.del {
+position: absolute;
+margin-top:-194rpx; 
+ margin-left:127rpx;   
+}   
+.del image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.imagebigsmall{
+  width:166rpx;
+  height:166rpx;
+}
+/* 客服电话 */
+/* .se-phonecall{
+  display: flex;
+  align-items: center;
+}
+.call{
+  height:60rpx;
+  width:200rpx;
+} */
